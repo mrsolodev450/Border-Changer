@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-top: 50px;
+  overflow: hidden;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 2px solid black;
+  transition: border-radius 300ms;
+  box-shadow: 0 0 3px rgba(0, 0, 0, .09);
+}
+
+input:is(#border-color, #border-radius) {
+  width: 200px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, .09);
+  outline: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-top: 10px;
+  transition: 300ms;
+}
+
+input:is(#border-radius) {
+  width: 90px;
+}
+
+input:is(#border-color, #border-radius):focus{
+  transform: scale(1.1);
+}
+
+select:is(#border-style){
+  width: 100px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, .09);
+  outline: none;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-top: 10px;
+  background-color: transparent;
+  appearance: none;
+  transition: 300ms;
+}
+
+.select-box:active {
+  transform: scale(.9);
+}
+
+.select-box {
+  position: relative;
+  transition: 300ms;
+}
+
+.select-box:before {
+  content: "";
+  width: 12px;
+  height: 10px;
+  position: absolute;
+  top: 25px;
+  right: 10px;
+  clip-path: polygon(100% 0 , 50% 100% , 0 0 );
+  background: #45454d;
+  transition: 300ms;
+  pointer-events: none;
+}
+
+section {
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
